@@ -20,7 +20,7 @@ EOT;
             $member_posts = new Member_Posts($mysqli);
             $posts = $member_posts->queryPosts($mysqli);
             foreach ($posts as $post) {
-              print "<a href='".$post->getPostLocation()."' >".$post->getPostName()."</a>";
+              print "<li><a href='".$post->getPostLocation()."' >".$post->getPostName()."</a></li>";
             }
     echo <<<EOT
           </ul>
